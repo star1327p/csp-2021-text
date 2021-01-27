@@ -1,0 +1,998 @@
+% Data Preprocessing 
+
+@article{chai2020importance,
+  title={The Importance of Data Cleaning: Three Visualization Examples},
+  author={Chai, Christine P},
+  journal={CHANCE},
+  volume={33},
+  number={1},
+  pages={4--9},
+  year={2020},
+  publisher={Taylor \& Francis}
+}
+
+@article{lohr2014bigdata,
+  title = {For Big-Data Scientists, `Janitor Work' Is Key Hurdle to Insights},
+  author = {Steve Lohr},
+  journal = {The New York Times},
+  year={2014},
+  note={Available from: \url{https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html}}
+}
+
+@inproceedings{gharehchopogh2011analysis,
+  title={Analysis and evaluation of unstructured data: Text mining versus natural language processing},
+  author={Gharehchopogh, Farhad Soleimanian and Khalifelu, Zeinab Abbasi},
+  booktitle={2011 5th International Conference on Application of Information and Communication Technologies (AICT)},
+  pages={1--4},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{kalra2018importance,
+  title={Importance of Text Data Preprocessing \& Implementation in {R}apid{M}iner},
+  author={Kalra, Vaishali and Aggarwal, Rashmi},
+  booktitle={Proceedings of the First International Conference on Information
+Technology and Knowledge Management (ICITKM)},
+  volume={14},
+  pages={71--75},
+  year={2018}
+}
+
+% ----------------------------------------------------------------------
+
+% Text preprocessing and reproducibility
+@article{roy2018clean,
+  title={To Clean or Not to Clean: Document Preprocessing and Reproducibility},
+  author={Roy, Dwaipayan and Mitra, Mandar and Ganguly, Debasis},
+  journal={Journal of Data and Information Quality (JDIQ)},
+  volume={10},
+  number={4},
+  pages={1--25},
+  year={2018},
+  publisher={ACM New York, NY, USA}
+}
+
+% Text Data Cleaning Literature
+% Top Practical Books on Natural Language Processing
+% https://machinelearningmastery.com/books-on-natural-language-processing/
+% http://www.nltk.org/book/
+% Book: Need to include a text data cleaning section
+% 3. Processing Raw Text
+@book{bird2009natural,
+  title={Natural language processing with Python: Analyzing text with the natural language toolkit},
+  author={Bird, Steven and Klein, Ewan and Loper, Edward},
+  year={2009},
+  publisher={O'Reilly Media Inc.}
+}
+
+% ELMo = Embeddings from Language Models
+@article{peters2018deep,
+  title={Deep contextualized word representations},
+  author={Peters, Matthew E and Neumann, Mark and Iyyer, Mohit and Gardner, Matt and Clark, Christopher and Lee, Kenton and Zettlemoyer, Luke},
+  journal={arXiv preprint arXiv:1802.05365},
+  year={2018}
+}
+
+% BERT = Bidirectional Encoder Representations from Transformers (original paper)
+% BERT supports ~100 different languages.
+% https://github.com/google-research/bert/blob/master/multilingual.md
+@article{devlin2018bert,
+  title={{BERT}: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+
+% GloVe = Global Vectors for Word Representation
+% https://nlp.stanford.edu/projects/glove/
+@inproceedings{pennington2014glove,
+  title={{GloVe}: Global vectors for word representation},
+  author={Pennington, Jeffrey and Socher, Richard and Manning, Christopher D},
+  booktitle={Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)},
+  pages={1532--1543},
+  year={2014}
+}
+
+% word2vec
+@article{mikolov2013efficient,
+  title={Efficient estimation of word representations in vector space},
+  author={Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+  journal={arXiv preprint arXiv:1301.3781},
+  year={2013}
+}
+
+@inproceedings{wilson2020urban,
+  title={Urban dictionary embeddings for slang {NLP} applications},
+  author={Wilson, Steven and Magdy, Walid and McGillivray, Barbara and Garimella, Kiran and Tyson, Gareth},
+  booktitle={Proceedings of The 12th Language Resources and Evaluation Conference},
+  pages={4764--4773},
+  year={2020}
+}
+
+% ----------------------------------------------------------------------
+
+% Tokenization
+@article{clough2001perl,
+  title={A {Perl} program for sentence splitting using rules},
+  author={Clough, Paul},
+  journal={University of Sheffield},
+  year={2001}
+}
+
+% ``Lexical richness is about the quality of vocabulary in a language sample.''
+@article{malvern2012measures,
+  title={Measures of lexical richness},
+  author={Malvern, David and Richards, Brian},
+  journal={The encyclopedia of applied linguistics},
+  year={2012},
+  publisher={Wiley Online Library}
+}
+
+@inproceedings{diaz2015analysis,
+  title={An analysis of biomedical tokenization: Problems and strategies},
+  author={D{\'\i}az, Noa P Cruz and L{\'o}pez, Manuel J Ma{\~n}a},
+  booktitle={Proceedings of the Sixth International Workshop on Health Text Mining and Information Analysis},
+  pages={40--49},
+  year={2015}
+}
+
+@article{head2015extent,
+  title={The extent and consequences of p-hacking in science},
+  author={Head, Megan L and Holman, Luke and Lanfear, Rob and Kahn, Andrew T and Jennions, Michael D},
+  journal={PLOS Biology},
+  volume={13},
+  number={3},
+  pages={e1002106},
+  year={2015},
+  publisher={Public Library of Science}
+}
+
+% ``Arabic: A single word can comprise up to four independent tokens, morphological knowledge needs to be incorporated into the tokenizer.''
+@inproceedings{attia2007arabic,
+  title={Arabic tokenization system},
+  author={Attia, Mohammed},
+  booktitle={Proceedings of the 2007 Workshop on Computational Approaches to Semitic Languages: Common Issues and Resources},
+  pages={65--72},
+  year={2007}
+}
+
+% ``For unsegmented languages such as Japanese and Chinese, tokenization of a sentence has a significant impact on the performance of text classification.''
+@inproceedings{hiraoka2019stochastic,
+  title={Stochastic tokenization with a language model for neural text classification},
+  author={Hiraoka, Tatsuya and Shindo, Hiroyuki and Matsumoto, Yuji},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={1620--1629},
+  year={2019}
+}
+
+% Korean is different than Chinese or Japanese in terms of tokenization.
+% ``Korean is an outlier in the CJK family, which linguistically has a shared vocabulary in terms of roots, but uses an entirely different character representation. A straightforward approach would be to share the character level vocabulary between CJK languages, as it was possible between Chinese and Japanese. However, this, unfortunately, is not a straightforward operation, as Hangul (the Korean writing system) is phonetic, unlike the other two examples.''
+ 
+@inproceedings{moon2020jamo,
+  title={Jamo Pair Encoding: Subcharacter Representation-based Extreme {Korean} Vocabulary Compression for Efficient Subword Tokenization},
+  author={Moon, Sangwhan and Okazaki, Naoaki},
+  booktitle={Proceedings of The 12th Language Resources and Evaluation Conference},
+  pages={3490--3497},
+  year={2020}
+}
+
+% Compound Words -- Leverage Word Embeddings
+@article{shwartz2019still,
+  title={Still a pain in the neck: Evaluating text representations on lexical composition},
+  author={Shwartz, Vered and Dagan, Ido},
+  journal={Transactions of the Association for Computational Linguistics},
+  volume={7},
+  pages={403--419},
+  year={2019},
+  publisher={MIT Press}
+}
+
+% Turbo Topics
+@article{blei2009visualizing,
+  title={Visualizing topics with multi-word expressions},
+  author={Blei, David M and Lafferty, John D},
+  journal={arXiv preprint arXiv:0907.1013},
+  year={2009}
+}
+
+% ----------------------------------------------------------------------
+
+% Handling Punctuation
+
+% Text Classification - Consider Documents Only
+@article{korde2012text,
+  title={Text classification and classifiers: A survey},
+  author={Korde, Vandana and Mahender, C Namrata},
+  journal={International Journal of Artificial Intelligence \& Applications},
+  volume={3},
+  number={2},
+  pages={85},
+  year={2012},
+  publisher={Academy \& Industry Research Collaboration Center (AIRCC)}
+}
+
+% Text Summarization - Sentence Extraction
+@article{patil2015automatic,
+  title={Automatic text summarization},
+  author={Patil, Aarti and Pharande, Komal and Nale, Dipali and Agrawal, Roshani},
+  journal={International Journal of Computer Applications},
+  volume={109},
+  number={17},
+  year={2015},
+  publisher={Foundation of Computer Science}
+}
+
+% Machine Translation - Sentence Segmentation
+@book{kim2019researching,
+  title={Researching Translation in the Age of Technology and Global Conflict: Selected Works of {Mona Baker}},
+  author={Kim, Kyung Hye and Zhu, Yifan},
+  year={2019},
+  publisher={Routledge}
+}
+
+% ``Syntactic information potentially plays a much more important role in question answering than it does in information retrieval''
+@techreport{li2001incorporating,
+  title={Incorporating Syntactic Information in Question Answering},
+  author={Li, Xiaoyan and Croft, W Bruce},
+  year={2001},
+  institution={Center for Intelligent Information Retrieval at University of Massachusetts -- Amherst}
+}
+
+% Punctuation -- Discourse Parsing (Text Level)
+% ``Text-level discourse parsing is notoriously difficult, as distinctions between discourse relations require subtle semantic judgments that are not easily captured using standard features.''
+@inproceedings{ji2014representation,
+  title={Representation learning for text-level discourse parsing},
+  author={Ji, Yangfeng and Eisenstein, Jacob},
+  booktitle={Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics},
+  volume={1},
+  pages={13--24},
+  year={2014}
+}
+
+% Eats, Shoots and Leaves
+@book{truss2004eats,
+  title={Eats, Shoots \& Leaves: The zero tolerance approach to punctuation},
+  author={Truss, Lynne},
+  year={2004},
+  publisher={Penguin}
+}
+
+% Python library: pycontractions
+% https://pypi.org/project/pycontractions/
+@misc{pycontractions,
+  title={pycontractions 2.0.1},
+  author={Beaver, Ian},
+  year={2019},
+  note={Python library. Available from: \url{https://pypi.org/project/pycontractions/}}
+}
+
+@article{rahman2017detecting,
+  title={Detecting emotion from text and emoticon},
+  author={Rahman, Romana and others},
+  journal={London Journal of Research in Computer Science and Technology},
+  year={2017}
+}
+
+% ----------------------------------------------------------------------
+
+% Removing Stopwords
+
+% Stopword definition (better)
+% ``Stopwords are terms in a language that appear so often and pervasively in the documents as to make them irrelevant to distinguish documents with respect to their content.'' 
+@article{ferilli2014automatic,
+  title={Automatic learning of linguistic resources for stopword removal and stemming from text},
+  author={Ferilli, Stefano and Esposito, Floriana and Grieco, Domenico},
+  journal={Procedia Computer Science},
+  volume={38},
+  pages={116--123},
+  year={2014},
+  publisher={Elsevier}
+}
+
+% Domain-Specific Stopwords -- Examples
+% `In the NIPS dataset, the words ``problem,'' ``algorithms,'' ``method,'' ``data,'' and ``learning'' are domain-specific stopwords.'
+% Additional discussion: https://rxnlp.com/constructing-a-domain-specific-stop-word-list
+@article{fan2017promoting,
+  title={Promoting domain-specific terms in topic models with informative priors},
+  author={Fan, Angela and Doshi-Velez, Finale and Miratrix, Luke},
+  journal={arXiv preprint arXiv:1701.03227},
+  year={2017}
+}
+
+% Real -- Zipf's law
+@article{zipf1949human,
+  title={Human behavior and the principle of least effort},
+  author={Zipf, George Kingsley},
+  year={1949},
+  publisher={Addison-Wesley Press}
+}
+
+% Domain-Specific Stopwords -- Entropy (Information Theory)
+@article{gerlach2019universal,
+  title={A universal information theoretic approach to the identification of stopwords},
+  author={Gerlach, Martin and Shi, Hanyu and Amaral, Lu{\'\i}s A Nunes},
+  journal={Nature Machine Intelligence},
+  volume={1},
+  number={12},
+  pages={606--612},
+  year={2019},
+  publisher={Nature Publishing Group}
+}
+
+% Domain-Specific Stopwords
+@article{sarica2020stopwords,
+  title={Stopwords in Technical Language Processing},
+  author={Sarica, Serhad and Luo, Jianxi},
+  journal={arXiv preprint arXiv:2006.02633},
+  year={2020}
+}
+
+% Predefined stopword list: Appropriate or not?
+@inproceedings{schofield2017pulling,
+  title={Pulling out the stops: Rethinking stopword removal for topic models},
+  author={Schofield, Alexandra and Magnusson, M{\aa}ns and Mimno, David},
+  booktitle={Proceedings of the Fifteenth Conference of the European Chapter of the Association for Computational Linguistics},
+  volume={2},
+  pages={432--436},
+  year={2017}
+}
+
+% Project Gutenberg -- Discussion 2015
+% GlutenTag: NLP x Punctuation x Contractions
+% ``We are careful to preserve within-word hyphenation, contractions, and the direction of quotation marks.''
+@inproceedings{brooke2015gutentag,
+  title={{GutenTag}: An {NLP}-driven tool for digital humanities research in the {Project Gutenberg} corpus},
+  author={Brooke, Julian and Hammond, Adam and Hirst, Graeme},
+  booktitle={Proceedings of the Fourth Workshop on Computational Linguistics for Literature},
+  pages={42--47},
+  year={2015}
+}
+
+% Stopwords in dependency parsing
+@inproceedings{elming2013down,
+  title={Down-stream effects of tree-to-dependency conversions},
+  author={Elming, Jakob and Johannsen, Anders and Klerke, Sigrid and Lapponi, Emanuele and Alonso, Hector Martinez and S{\o}gaard, Anders},
+  booktitle={Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={617--626},
+  year={2013}
+}
+
+% Stopwords in dependency parsing
+@inproceedings{poria2014dependency,
+  title={Dependency-based semantic parsing for concept-level text analysis},
+  author={Poria, Soujanya and Agarwal, Basant and Gelbukh, Alexander and Hussain, Amir and Howard, Newton},
+  booktitle={International Conference on Intelligent Text Processing and Computational Linguistics},
+  pages={113--127},
+  year={2014},
+  organization={Springer}
+}
+
+% Stopwords -> authorship attribution
+@inproceedings{arun2009stopword,
+  title={Stopword graphs and authorship attribution in text corpora},
+  author={Arun, Rajkumar and Suresh, Venkatasubramaniyan and Madhavan, CE Veni},
+  booktitle={2009 IEEE International Conference on Semantic Computing},
+  pages={192--196},
+  year={2009},
+  organization={IEEE}
+}
+
+% Stopwords usage -> detect plagiarism
+@article{stamatatos2011plagiarism,
+  title={Plagiarism detection using stopword n-grams},
+  author={Stamatatos, Efstathios},
+  journal={Journal of the American Society for Information Science and Technology},
+  volume={62},
+  number={12},
+  pages={2512--2527},
+  year={2011},
+  publisher={Wiley Online Library}
+}
+
+% Stopwords usage -> detect plagiarism
+@article{sanchez2019paraphrase,
+  title={Paraphrase plagiarism identification with character-level features},
+  author={S{\'a}nchez-Vega, Fernando and Villatoro-Tello, Esa{\'u} and Montes-y-G{\'o}mez, Manuel and Rosso, Paolo and Stamatatos, Efstathios and Villase{\~n}or-Pineda, Luis},
+  journal={Pattern Analysis and Applications},
+  volume={22},
+  number={2},
+  pages={669--681},
+  year={2019},
+  publisher={Springer}
+}
+
+% ----------------------------------------------------------------------
+
+% Stemming and Lemmatization
+
+% Christopher D. Manning, Prabhakar Raghavan and Hinrich Schütze, Introduction to Information Retrieval, Cambridge University Press. 2008.
+% Stemming and Lemmatization
+% https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
+% Book link: https://nlp.stanford.edu/IR-book/
+@book{manning2008introduction,
+  title={Introduction to Information Retrieval},
+  author={Manning, Christopher and Raghavan, Prabhakar and Sch{\"u}tze, Hinrich},
+  year={2008},
+  publisher={Cambridge University Press}
+}
+
+% Advantages of Stemming
+@incollection{biba2014boosting,
+  title={Boosting text classification through stemming of composite words},
+  author={Biba, Marenglen and Gjati, Eva},
+  booktitle={Recent Advances in Intelligent Informatics},
+  pages={185--194},
+  year={2014},
+  publisher={Springer}
+}
+
+% Word Stemming for Information Retrieval
+@article{rajput2015survey,
+  title={A survey of stemming algorithms for information retrieval},
+  author={Rajput, Brajendra Singh and Khare, Nilay},
+  journal={International Organization of Scientific Research -- Journal of Computer Engineering},
+  volume={17},
+  number={3},
+  pages={76--80},
+  year={2015}
+}
+
+% Stemming and Lemmatization destroy sentiment information
+@inproceedings{bao2014role,
+  title={The role of pre-processing in {Twitter} sentiment analysis},
+  author={Bao, Yanwei and Quan, Changqin and Wang, Lijuan and Ren, Fuji},
+  booktitle={International Conference on Intelligent Computing},
+  pages={615--624},
+  year={2014},
+  organization={Springer}
+}
+
+@article{cambria2017sentiment,
+  title={Sentiment analysis is a big suitcase},
+  author={Cambria, Erik and Poria, Soujanya and Gelbukh, Alexander and Thelwall, Mike},
+  journal={IEEE Intelligent Systems},
+  volume={32},
+  number={6},
+  pages={74--80},
+  year={2017},
+  publisher={IEEE}
+}
+
+
+% Lemmatization hurts sentiment analysis
+@article{bao2009novel,
+  title={A Novel {PTSVM} Algorithm for {Twitter} Sentiment Analysis},
+  author={Bao, Yanwei and Quan, Changqin},
+  journal={International Journal of Advanced Intelligence},
+  year={2009}
+}
+
+% Stemming hurts sentiment analysis
+@techreport{ghazvinian2011star,
+  title={Star Quality: Sentiment Categorization of Restaurant Reviews},
+  author={Ghazvinian, Amir},
+  institution={Stanford University},
+  year={2011}
+}
+
+@article{porter1980algorithm,
+  title={An algorithm for suffix stripping},
+  author={Porter, Martin F},
+  journal={Program},
+  volume={14},
+  number={3},
+  pages={130--137},
+  year={1980}
+}
+
+% Definition of stemming:
+% ``A stemming algorithm is a computational procedure which reduces all words with the same root (or, if prefixes are left untouched, the same stem) to a common form, usually by stripping each word of its derivational and inflectional suffixes.''
+@article{lovins1968development,
+  title={Development of a stemming algorithm},
+  author={Lovins, Julie Beth},
+  journal={Mechanical Translation and Computational Linguistics},
+  volume={11},
+  number={1-2},
+  pages={22--31},
+  year={1968}
+}
+
+% Stemming: Lancaster Stemmer
+@misc{paice2005lancaster,
+  title={Lancaster Stemmer},
+  author={Paice, C and Hooper, R},
+  year={2005}
+}
+
+% Lemmatization -- Context
+@inproceedings{bergmanis2018context,
+  title={Context sensitive neural lemmatization with {Lematus}},
+  author={Bergmanis, Toms and Goldwater, Sharon},
+  booktitle={Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={1391--1400},
+  volume={1},
+  year={2018}
+}
+
+@inproceedings{tsarfaty2010statistical,
+  title={Statistical parsing of morphologically rich languages ({SPMRL}): What, how and whither},
+  author={Tsarfaty, Reut and Seddah, Djam{\'e} and Goldberg, Yoav and K{\"u}bler, Sandra and Candito, Marie and Foster, Jennifer and Versley, Yannick and Rehbein, Ines and Tounsi, Lamia},
+  booktitle={Proceedings of the NAACL-HLT 2010 First Workshop on Statistical Parsing of Morphologically-Rich Languages},
+  pages={1--12},
+  year={2010},
+  organization={Association for Computational Linguistics},
+  note={{NAACL-HLT} stands for the North American Chapter of the Association for Computational Linguistics: Human Language Technologies.}
+}
+
+% ----------------------------------------------------------------------
+
+% N-Gramming and Multi-Word Expressions
+
+% N-gramming (word-based): word n-grams vs character n-grams
+@article{gries2010lexical,
+  title={Lexical gravity across varieties of {E}nglish: An {ICE}-based study of n-grams in {Asian} {Englishes}},
+  author={Gries, Stefan Th. and Mukherjee, Joybrato},
+  journal={International Journal of Corpus Linguistics},
+  volume={15},
+  number={4},
+  pages={520--548},
+  year={2010},
+  publisher={John Benjamins}
+}
+
+% English has very few inflections.
+@incollection{haspelmath1996word,
+  title={Word-class-changing inflection and morphological theory},
+  author={Haspelmath, Martin},
+  booktitle={Yearbook of Morphology 1995},
+  pages={43--66},
+  year={1996},
+  publisher={Springer}
+}
+
+% Inflectional languages: word order is still helpful
+@article{beier2011exploiting,
+  title={Exploiting word order to express an inflectional category: Reality status in Iquito},
+  author={Beier, Christine and Hansen, Cynthia and Lai, I-wen and Michael, Lev},
+  journal={Linguistic Typology},
+  volume={15},
+  number={1},
+  pages={65--99},
+  year={2011},
+  publisher={De Gruyter Mouton}
+}
+
+% N-Gramming: Minimum Frequency 100 and 1000
+% Default = n-grams have to occur at least five times.
+% A low threshold of minimum frequency => steep increase in computation time
+% Datasets: NYT and CW
+% The paper used minimum frequency = 100 for NYT and 1000 for CW to reflect their different scales.
+% [6] The ClueWeb09 dataset~\cite{callan2009clueweb09}
+% [7] The New York Times Annotated Corpus~\cite{sandhaus2008nyt}
+@inproceedings{berberich2013computing,
+  title={Computing n-gram statistics in {MapReduce}},
+  author={Berberich, Klaus and Bedathur, Srikanta},
+  booktitle={Proceedings of the 16th International Conference on Extending Database Technology},
+  pages={101--112},
+  year={2013}
+}
+
+% ``The identification of Multi-Word Expressions (MWEs) is central to resolving ambiguity of phrases. Recent works show that deep learning methods outperform statistical and lexical based approaches.''
+@inproceedings{ashok2019comparing,
+  title={Comparing Different Word Embeddings for Multiword Expression Identification},
+  author={Ashok, Aishwarya and Elmasri, Ramez and Natarajan, Ganapathy},
+  booktitle={International Conference on Applications of Natural Language to Information Systems},
+  pages={295--302},
+  year={2019},
+  organization={Springer}
+}
+
+% `` The tokenization of MWEs makes the occurrences of single words in a training corpus more sparse, but we show that it does not pose negative impacts on single-word translations.''
+@inproceedings{otani2020pre,
+  title={Pre-tokenization of Multi-word Expressions in Cross-lingual Word Embeddings},
+  author={Otani, Naoki and Ozaki, Satoru and Zhao, Xingyuan and Li, Yucen and St Johns, Micaelah and Levin, Lori},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages={4451--4464},
+  year={2020}
+}
+
+% Conditional random fields
+% This is an undirected probabilistic graphical model.
+% Applications in pattern recognition and machine learning => structured prediction
+% https://en.wikipedia.org/wiki/Conditional_random_field
+@inproceedings{lafferty2001conditional,
+  title={Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data},
+  author={Lafferty, John D and McCallum, Andrew and Pereira, Fernando CN},
+  booktitle={Proceedings of the Eighteenth International Conference on Machine Learning},
+  pages={282--289},
+  year={2001}
+}
+
+% Conditional random fields
+@inproceedings{maldonado2017detection,
+  title={Detection of Verbal Multi-Word Expressions via Conditional Random Fields with Syntactic Dependency Features and Semantic Re-Ranking},
+  author={Maldonado, Alfredo and Han, Lifeng and Moreau, Erwan and Alsulaimani, Ashjan and Chowdhury, Koel Dutta and Vogel, Carl and Liu, Qun},
+  booktitle={Proceedings of the 13th Workshop on Multiword Expressions (MWE 2017)},
+  pages={114--120},
+  year={2017}
+}
+
+% Multi-Word Expressions -- Word Sense Disambiguation
+@inproceedings{finlayson2011detecting,
+  title={Detecting multi-word expressions improves word sense disambiguation},
+  author={Finlayson, Mark and Kulkarni, Nidhi},
+  booktitle={Proceedings of the Workshop on Multiword Expressions: From Parsing and Generation to the Real World},
+  pages={20--24},
+  year={2011}
+}
+
+% Multi-Word Expressions -- Machine Translation
+@inproceedings{tan2014manawi,
+  title={Manawi: Using multi-word expressions and named entities to improve machine translation},
+  author={Tan, Liling and Pal, Santanu},
+  booktitle={Proceedings of the Ninth Workshop on Statistical Machine Translation},
+  pages={201--206},
+  year={2014}
+}
+
+% Multi-Word Expressions -- Machine Translation
+@article{han2020multimwe,
+  title={{MultiMWE}: Building a Multi-lingual Multi-Word Expression ({MWE}) Parallel Corpora},
+  author={Han, Lifeng and Jones, Gareth JF and Smeaton, Alan F},
+  journal={arXiv preprint arXiv:2005.10583},
+  year={2020}
+}
+
+% Multi-Word Expressions x Psycholinguistics
+@misc{muller2011multi,
+  title={Multi-Word Expressions. Ingeborg Ohnheiser: Word Formation, An International Handbook of the Languages of Europe [HSK series]},
+  author={M{\"u}ller, Peter O},
+  year={2011},
+  publisher={De Gruyter: Berlin}
+}
+
+% ----------------------------------------------------------------------
+
+% From Reviewer 3 (Natural Language Engineering)
+% Possibly the most important paper on tokenization in the past few years
+@inproceedings{trieschnigg2007influence,
+  title={The influence of basic tokenization on biomedical document retrieval},
+  author={Trieschnigg, Dolf and Kraaij, Wessel and de Jong, Franciska},
+  booktitle={Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={803--804},
+  year={2007}
+}
+
+% Implications of ``text cleaning'' issues for use of natural language processing in diagnosis
+@article{cohen2019p-hacking,
+  title={P-Hacking Lexical Richness Through Definitions of ``Type'' and ``Token''},
+  author={Cohen, K Bretonnel and Hunter, Lawrence E and Pressman, Peter S},
+  journal={Studies in Health Technology and Informatics},
+  volume={264},
+  pages={1433--1434},
+  year={2019},
+  organization={International Medical Informatics Association (IMIA)}
+}
+
+% A paper that talks a lot about normalization, taking a linguistic approach to the topic, and that led to the development of a new task type in biomedial natural language processing.
+@inproceedings{cohen2002contrast,
+  title={Contrast and variability in gene names},
+  author={Cohen, K Bretonnel and Acquaah-Mensah, George K and Dolbey, Andrew E and Hunter, Lawrence},
+  booktitle={Proceedings of the ACL-02 Workshop on Natural Language Processing in the Biomedical Domain},
+  volume={3},
+  pages={14--20},
+  year={2002},
+  organization={Association for Computational Linguistics (ACL)}
+}
+
+% Paper with a good table to include in this paper
+@article{gron2018clinical,
+  title={Clinical sublanguages: Vocabulary structure and its impact on term weighting},
+  author={Gr{\"o}n, Leonie and Bertels, Ann},
+  journal={Terminology: International Journal of Theoretical and Applied Issues in Specialized Communication},
+  volume={24},
+  number={1},
+  pages={41--65},
+  year={2018},
+  publisher={John Benjamins Publishing Company}
+}
+
+% Also added by Reviewer 3
+@article{barrett2011building,
+  title={Building a biomedical tokenizer using the token lattice design pattern and the adapted {Viterbi} algorithm},
+  author={Barrett, Neil and Weber-Jahnke, Jens},
+  journal={BMC Bioinformatics},
+  volume={12},
+  number={3},
+  pages={S1},
+  year={2011},
+  publisher={BioMed Central}
+}
+
+% Important syntactic use of forward slash (/) characteristic of a clinical sublanguage in Bulgarian
+@inproceedings{temnikova2013closure,
+  title={Closure properties of {Bulgarian} clinical text},
+  author={Temnikova, Irina and Nikolova, Ivelina and Baumgartner Jr, William A and Angelova, Galia and Cohen, K Bretonnel},
+  booktitle={Proceedings of the International Conference Recent Advances in Natural Language Processing (RANLP)},
+  pages={667--675},
+  year={2013}
+}
+
+@article{jiang2007empirical,
+  title={An empirical study of tokenization strategies for biomedical information retrieval},
+  author={Jiang, Jing and Zhai, Chengxiang},
+  journal={Information Retrieval},
+  volume={10},
+  number={4-5},
+  pages={341--363},
+  year={2007},
+  publisher={Springer}
+}
+
+% ----------------------------------------------------------------------
+
+% Example 1: JSM Abstract Dataset
+
+% JSM Abstract Dataset (Session Scheduling)
+% Yongjian Bi's Master's thesis
+@mastersthesis{yongjianbi2016masters,
+	author={Yongjian Bi},
+	title={Scheduling Optimization with {LDA} and Greedy Algorithm},
+	school={Duke University},
+	year	={2016},
+       note = {LDA stands for latent Dirichlet allocation}
+}
+
+% LDA and Conference Session Scheduling 
+@mastersthesis{sweeney2020unsupervised,
+  title={Unsupervised machine learning for conference scheduling: A natural language processing approach based on latent {Dirichlet} allocation},
+  author={Sweeney, Kristian},
+  school={NHH Norwegian School of Economics},
+  year={2020}
+}
+
+% Virtual Conference Scheduling
+@article{patro2020fair,
+  title={On Fair Virtual Conference Scheduling: Achieving Equitable Participant and Speaker Satisfaction},
+  author={Patro, Gourab K and Chakraborty, Abhijnan and Ganguly, Niloy and Gummadi, Krishna P},
+  journal={arXiv preprint arXiv:2010.14624},
+  year={2020}
+}
+
+% ----------------------------------------------------------------------
+
+% Example 2: Social Media Data
+
+% Twitter Abbreviations - 1
+@inproceedings{pennell2011toward,
+  title={Toward text message normalization: Modeling abbreviation generation},
+  author={Pennell, Deana and Liu, Yang},
+  booktitle={2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={5364--5367},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{blodgett2018twitter,
+  title={Twitter universal dependency parsing for {African-American} and mainstream {American English}},
+  author={Blodgett, Su Lin and Wei, Johnny and O'Connor, Brendan},
+  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={1415--1425},
+  year={2018}
+}
+
+% Social media data application -- COVID-19 x information spreading
+@article{cinelli2020covid,
+  title={The {COVID-19} social media infodemic},
+  author={Cinelli, Matteo and Quattrociocchi, Walter and Galeazzi, Alessandro and Valensise, Carlo Michele and Brugnoli, Emanuele and Schmidt, Ana Lucia and Zola, Paola and Zollo, Fabiana and Scala, Antonio},
+  journal={Scientific Reports},
+  volume={10},
+  number={1},
+  pages={1--10},
+  year={2020},
+  publisher={Nature Publishing Group}
+}
+
+% COVID-19 Twitter Data Daily Updates
+% https://github.com/thepanacealab/covid19_twitter
+@article{banda2020large,
+  title={A large-scale {COVID-19} {Twitter} chatter dataset for open scientific research -- {An} international collaboration},
+  author={Banda, Juan M and Tekumalla, Ramya and Wang, Guanyu and Yu, Jingyuan and Liu, Tuo and Ding, Yuning and Chowell, Gerardo},
+  journal={arXiv preprint arXiv:2004.03688},
+  year={2020}
+}
+
+@article{muller2020covid,
+  title={{COVID-Twitter-BERT}: A natural language processing model to analyse {COVID-19} content on {Twitter}},
+  author={M{\"u}ller, Martin and Salath{\'e}, Marcel and Kummervold, Per E},
+  journal={arXiv preprint arXiv:2005.07503},
+  year={2020}
+}
+
+@article{giorgi2020twitter,
+  title={Twitter corpus of the {\#BlackLivesMatter} movement and counter protests: 2013 to 2020},
+  author={Giorgi, Salvatore and Guntuku, Sharath Chandra and Rahman, Muhammad and Himelein-Wachowiak, McKenzie and Kwarteng, Amy and Curtis, Brenda},
+  journal={arXiv preprint arXiv:2009.00596},
+  year={2020}
+}
+
+@article{chen2020election2020,
+  title={{\#Election2020}: The first public {Twitter} dataset on the 2020 {US} presidential election},
+  author={Chen, Emily and Deb, Ashok and Ferrara, Emilio},
+  journal={arXiv preprint arXiv:2010.00600},
+  year={2020}
+}
+
+@article{karami2020twitter,
+  title={Twitter speaks: A case of national disaster situational awareness},
+  author={Karami, Amir and Shah, Vishal and Vaezi, Reza and Bansal, Amit},
+  journal={Journal of Information Science},
+  volume={46},
+  number={3},
+  pages={313--324},
+  year={2020},
+  publisher={SAGE Publications Sage UK: London, England}
+}
+
+% Learning the Language of BlackTwitter (SDSS 2019)
+% Brandeis Hill Marshall, Spelman College 
+% https://ww2.amstat.org/meetings/sdss/2019/onlineprogram/AbstractDetails.cfm?AbstractID=305061
+@inproceedings{marshall2018impact,
+  title={The Impact of Live {Tweeting} on Social Movements},
+  author={Marshall, Brandeis and Blunt, Takeria and Thompson, Tayloir},
+  booktitle={2018 IEEE International Conference on Information Reuse and Integration (IRI)},
+  pages={209--216},
+  year={2018},
+  organization={IEEE}
+}
+
+% ----------------------------------------------------------------------
+
+% Example 3: Text with Numerical Ratings 
+
+% Christine Chai's PhD dissertation
+@phdthesis{chai2017phdthesis,
+	author={Chai, Christine P},
+	title={Statistical Issues in Quantifying Text Mining Performance},
+	school={Duke University},
+	year	={2017},
+	type = {{PhD} dissertation}
+}
+
+% My Survey Text Mining Paper
+@article{Chai2019Text,
+   journal={Survey Practice},
+   title={Text Mining in Survey Data},
+   doi={10.29115/SP-2018-0035},
+   volume={12},
+   number={1},
+   author={Chai, Christine P},
+   year={2019},
+   pages={1--13}
+}
+
+% sLDA original paper
+% The paper was presented at NeurIPS 2007 and published in 2008.
+@inproceedings{mcauliffe2007supervised,
+  title={Supervised Topic Models},
+  author={Mc{A}uliffe, Jon D and Blei, David M},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={121--128},
+  year={2008}
+}
+
+% Survey Text with Numerical Ratings
+
+% Nick Fisher Dataset (Employee Satisfaction Dataset)
+% Full name: Nicholas Irving Fisher
+@book{fisher2013analytics,
+  title={Analytics for leaders: A performance measurement system for business success},
+  author={Fisher, NI},
+  year={2013},
+  publisher={Cambridge University Press}
+}
+
+% Nick Fisher's paper on performance measurement (April 2019)
+% https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12424
+@article{fisher2019comprehensive,
+  title={A comprehensive approach to problems of performance measurement},
+  author={Fisher, NI},
+  journal={Journal of the Royal Statistical Society: Series A (Statistics in Society)},
+  doi={10.1111/rssa.12424},
+  volume={182},
+  number={3},
+  pages={755--803},
+  year={2019}
+}
+
+% Nick Fisher's paper on survey rating correction \& EM algorithm
+% Reverse rating (1-10) problems
+@article{fisher2011getting,
+  title={Getting the `correct' answer from survey responses: A simple application of the {EM} algorithm},
+  author={Fisher, NI and Lee, AJ},
+  journal={Australian \& New Zealand Journal of Statistics},
+  volume={53},
+  number={3},
+  pages={353--364},
+  year={2011},
+  publisher={Wiley Online Library}
+}
+
+% ----------------------------------------------------------------------
+
+% Example 4: Biomedical Data
+
+% Biomedical word embeddings with GloVe
+% ``distinct vector to represent each word and ignores the internal structure of words''
+@article{zhang2019biowordvec,
+  title={{BioWordVec}, improving biomedical word embeddings with subword information and {MeSH}},
+  author={Zhang, Yijia and Chen, Qingyu and Yang, Zhihao and Lin, Hongfei and Lu, Zhiyong},
+  journal={Scientific data},
+  volume={6},
+  number={1},
+  pages={1--9},
+  year={2019},
+  publisher={Nature Publishing Group}
+}
+
+% ``We trained word embeddings using unstructured electronic health record (EHR) data available at Mayo Clinic and articles (MedLit) from PubMed Central, respectively.''
+@article{wang2018comparison,
+  title={A comparison of word embeddings for the biomedical natural language processing},
+  author={Wang, Yanshan and Liu, Sijia and Afzal, Naveed and Rastegar-Mojarad, Majid and Wang, Liwei and Shen, Feichen and Kingsbury, Paul and Liu, Hongfang},
+  journal={Journal of Biomedical Informatics},
+  volume={87},
+  pages={12--20},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{lee2020biobert,
+  title={{BioBERT}: A pre-trained biomedical language representation model for biomedical text mining},
+  author={Lee, Jinhyuk and Yoon, Wonjin and Kim, Sungdong and Kim, Donghyeon and Kim, Sunkyu and So, Chan Ho and Kang, Jaewoo},
+  journal={Bioinformatics},
+  volume={36},
+  number={4},
+  pages={1234--1240},
+  year={2020},
+  publisher={Oxford University Press}
+}
+
+% ----------------------------------------------------------------------
+
+% Discussion and Conclusion
+
+% Title: Instead of Just Teaching Data Science, Let's Understand How and Why People Do It
+% Conference: 2020 SDSS (Symposium on Data Science and Statistics)
+% Author: Rebecca Nugent, Carnegie Mellon University 
+% ``In data science, human subjective decisions play an important role as machine learning algorithms.''
+% https://ww2.amstat.org/meetings/sdss/2020/onlineprogram/AbstractDetails.cfm?AbstractID=308230
+
+% Title: Automating Data Science: Think About the Human-Machine Interface
+% Conference: (Undated) NASEM Opportunities for Accelerating Scientific Discovery
+% Author: Rebecca Nugent, Carnegie Mellon University 
+% ``While much of data science relies on extracting signal/structure using machine learning algorithms, much is based on human subjective decisions.''
+
+@misc{nugent2020instead,
+   title={Instead of Just Teaching Data Science, Let's Understand How and Why People Do It},
+   author={Rebecca Nugent},
+   year={2020},
+   howpublished={Symposium on Data Science and Statistics},
+   note={Abstract available from: \url{https://ww2.amstat.org/meetings/sdss/2020/onlineprogram/AbstractDetails.cfm?AbstractID=308230}}
+}
+
+% Detecting multi-word expressions is a challenging problem, even with the help of word embeddings.
+@inproceedings{hazem2018word,
+  title={Word embedding approach for synonym extraction of multi-word terms},
+  author={Hazem, Amir and Daille, B{\'e}atrice},
+  booktitle={Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)},
+  year={2018}
+}
+
+% Detecting multi-word expressions is a challenging problem, even with the help of word embeddings.
+@inproceedings{park2019learning,
+  title={Learning to generate word-and phrase-embeddings for efficient phrase-based neural machine translation},
+  author={Park, Chan Young and Tsvetkov, Yulia},
+  booktitle={Proceedings of the 3rd Workshop on Neural Generation and Translation},
+  pages={241--248},
+  year={2019}
+}
