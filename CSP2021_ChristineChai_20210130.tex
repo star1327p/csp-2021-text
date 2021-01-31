@@ -113,7 +113,8 @@
 -- \textit{The New York Times}~\cite{lohr2014bigdata}
 \end{flushright}
 	\bigskip
-\item Although time-consuming, data preprocessing is worth the efforts. Real-life data are messier than people think! Adequately preprocessed data are key to success in modeling.~\cite{chai2020importance}
+\item Although time-consuming, data preprocessing is worth the efforts. Real-life data are messier than people think!~\cite{chai2020importance}\\
+	Adequately preprocessed data are key to success in modeling.
 % e.g. Outliers may come from data entry mistakes.
 % Data errors are inevitable and may occur in creative and unexpected ways.
 	\bigskip
@@ -128,21 +129,23 @@
 	\bigskip
 \item Text data also require appropriate preprocessing,\\ to prepare the corpus for machine learning and text mining models.~\cite{kalra2018importance}
 	\bigskip
-\item Webscraped text often contains lots of HTML formats, which can be removed by \texttt{BeautifulSoup} in Python or \texttt{textclean} in $\mathsf{R}$.
+\item Webscraped text often contains lots of HTML formats.\\
+	$\Rightarrow$ Remove using Python \texttt{BeautifulSoup} or $\mathsf{R}$ \texttt{textclean}.
 \item Application-specific formats: e.g. [10:23 PM] in chat messages\\
-	Remove these formats using regular expressions.
+	$\Rightarrow$ Remove these formats using regular expressions.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Text preprocessing is more important than it seems!}
 \begin{itemize}
 % Reproducibility + documentation
-\item Text preprocessing details affect reproducibility.~\cite{roy2018clean}
+\item Text preprocessing details affect \textbf{reproducibility}.{\small~\cite{roy2018clean}}
 \item Removing stopwords: Which words are regarded as stopwords?\\
 	Obvious words: ``I'', ``the'', etc. What about non-obvious words?\\
 	e.g. Is ``algorithm'' a stopword in a computer science corpus?
 	\bigskip
-\item\citet{trieschnigg2007influence}: Tokenization decisions can contribute more to system performance than the algorithm itself.
+\item\citet{trieschnigg2007influence}: \textbf{Tokenization decisions} can contribute more to system performance than the text model itself.
+% Original sentence: ``Tokenization decisions can contribute more to system performance than the algorithm itself.'' The algorithm means the machine learning model.
 	\bigskip
 \item Text string \texttt{NF-$\kappa$ B/CD28-responsive} can be tokenized in many ways, resulting in different precision for document retrieval:
 	\begin{itemize}
@@ -189,15 +192,16 @@ Data from Table 2 in~\cite{cohen2002contrast}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Structure of this talk}
+\begin{frame}{Structure of this talk: Text Preprocessing Methods}
 \begin{itemize}
-\item Discuss several commonly-used text preprocessing methods\\
-	Explain the importance and raise potential issues for each
+\item Discuss several commonly-used methods\\
+	Explain the advantages and potential issues
 \item Review specific examples of text analysis\\
-	How text preprocessing decisions contribute to the modeling
-\item Discussion and key takeaways on text preprocessing
+	How preprocessing decisions contribute to the modeling
+\item Discussion and key takeaways % on text preprocessing
 	\bigskip
-\item But before we get into the methods, let's talk about the recent advances in natural language processing.
+\item But before we get into the methods, let's talk about the\\ 
+	recent advances in natural language processing.
 \end{itemize}
 \end{frame}
 
@@ -209,16 +213,18 @@ Data from Table 2 in~\cite{cohen2002contrast}
 \item Word embeddings map words to vectors using a large corpus.
 \item Helpful for text models and support in multiple languages.
 	\bigskip
-\item But we still need to learn the text preprocessing methods because word embeddings are not a panacea, i.e., have some limitations.
+\item We still need to learn text preprocessing methods, because \textbf{word embeddings are not a panacea}, i.e., have some limitations.
 	\begin{itemize}
 	\item Tokenization is required to break a text string into tokens (words).
-	\item Need to retrain the word embeddings if we need to add extra words (e.g. company-specific acronyms).~\cite{wilson2020urban}
+	% Without tokenization, we don't have words in the first place!
 	\item Some minority languages (e.g. Tibetan) are not supported yet.\footnote{\url{https://github.com/google-research/bert/blob/master/multilingual.md}}
+	\item To add extra words (e.g. company-specific acronyms),\\ 
+	we may need to retrain the word embeddings.~\cite{wilson2020urban}
 	\end{itemize}
 \end{itemize}
 \end{frame}
 
-\section{Common Text Preprocessing Methods} % Inspection
+\section{Common Text Preprocessing Methods}
 
 %\frame{\tableofcontents[currentsection]}
 \frame{\tableofcontents[currentsection, hidesubsections]}
@@ -235,7 +241,7 @@ Data from Table 2 in~\cite{cohen2002contrast}
 \item Example 2: ``I downloaded this software on-the-fly''\\
 	Does ``on-the-fly'' count as one word or three words?
 	\bigskip
-\item We need to decide which characters count as separators.
+\item We need to \textbf{decide which characters count as separators}.
 \item Examine abbreviations and non-standard punctuation usage, especially in biomedical text.~\cite{diaz2015analysis}
 \item And most importantly, be clear and consistent with the definitions.
 \end{itemize}
@@ -243,11 +249,12 @@ Data from Table 2 in~\cite{cohen2002contrast}
 
 \begin{frame}{Tokenization: Need Precise Definitions}
 \begin{itemize}
-\item Lexical richness measures the quality of vocabulary in a corpus~\cite{malvern2012measures}. It can be defined by
+\item \textbf{Lexical richness} measures the quality of vocabulary in a corpus~\cite{malvern2012measures}. It can be defined by
 $$\textbf{type-token ratio} =  \dfrac{\text{the number of types (distinct words)}}{\text{the number of tokens (total words)}}$$
 \item But the terms ``type'' and ``token'' are loosely defined.\\
 e.g. ``don't'' vs ``do not'', ``New$\_$York'' vs ``New York''
 	\bigskip
+% Keep this sentence because I really want to emphasize the problem of p-hacking.
 \item Some researchers try various definitions and select one that produces a statistically significant result.~\cite{cohen2019p-hacking}
 \item\textbf{P-hacking hurts reproducibility in research!}~\cite{head2015extent}
 \item Good practice: Give the precise definition of ``type'' and ``token''
@@ -283,10 +290,12 @@ e.g. ``don't'' vs ``do not'', ``New$\_$York'' vs ``New York''
 \begin{frame}{Handling Punctuation}
 \begin{itemize}
 \item Easiest way is to remove all punctuation from the text corpus.
-\item Acceptable for information retrieval \& topic modeling, where we focus on text rather than sentence~\cite{korde2012text}.
-\item Inappropriate for applications that require sentence segmentation!
+	\begin{itemize}
+	\item Acceptable for information retrieval \& topic modeling, where we focus on text rather than sentence~\cite{korde2012text}.
+	\item Inappropriate for applications that require sentence segmentation!
+	\end{itemize}
 	\bigskip
-\item Punctuation provides syntactic information for parsing.
+\item \textbf{Punctuation provides syntactic information for parsing.}
 \item Categories: sentence-final, sentence-internal, word-internal
 \item Part-of-speech tagging needs to identify sentence boundaries first.
 \item Sentences are necessary for end-use applications, such as:\\
@@ -423,8 +432,8 @@ Discourse parsing needs punctuation to identify relations between text.
 \item Project Gutenberg: 60,000+ publicly available e-books\footnote{\url{https://www.gutenberg.org/}}
 \item Choose an e-book of general content (e.g. \textit{Alice's Adventures in Wonderland}) to filter out non-technical words from a technical database.~\cite{brooke2015gutentag}
 	\bigskip
-\item Recommendation: Start with a smaller stopword list,\\
-	then gradually add more stopwords if necessary.
+\item \textbf{Recommendation: Start with a smaller stopword list,\\
+	then gradually add more stopwords if necessary.}
 \item Words removed do not return to the text model later.
 \end{itemize}
 \end{frame}
@@ -555,7 +564,7 @@ Bi-gram $w_1 w_2$ is a multi-word expression when $P(w_2 | w_1) > P(w_2)$
 % Applications in pattern recognition and machine learning => structured prediction
 % https://en.wikipedia.org/wiki/Conditional_random_field
 \item \textbf{Retrain word embeddings} to identify multi-word expressions\\
-	Still a growing field in deep learning~\cite{ashok2019comparing}\\
+	Still a growing field in deep learning.~\cite{ashok2019comparing}\\
 	Tokenizing multi-word expressions does not negatively impact machine translation of single words.~\cite{otani2020pre}
 \end{itemize}
 \end{frame}
@@ -801,12 +810,13 @@ COVID-Twitter-BERT: Pretrained large corpus{\small~\cite{muller2020covid}\footno
 \item Pretrained word embeddings for biomedical text\\ 
 	Gradually increasing in popularity~\cite{wang2018comparison}\\
 	BioBERT~\cite{lee2020biobert}: Pretrained on PubMed and PMC
-\item Challenge: Word vectors don't reflect internal structure of words\\
-	``\textbf{delta}proteobacteria'' and ``\textbf{beta}proteobacteria'' are related\\
+\item Challenge: Word vectors don't reflect internal structure of words.\\
+	e.g. ``\textbf{delta}proteobacteria'' and ``\textbf{beta}proteobacteria'' are related.\\
 	$\Rightarrow$ Leverage subword info. in pretraining~\cite{zhang2019biowordvec}
 	\bigskip
 \item Tokenizing biomedical text includes \textbf{Greek letter normalization} and \textbf{break point identification}~\cite{jiang2007empirical}
-\item Both \texttt{MIP-{\color{red}1-$\alpha$}} and \texttt{MIP-{\color{red}1$\alpha$}} should tokenize to \texttt{MIP 1 alpha}
+\item Both \texttt{MIP-{\color{red}\textbf{1-}\boldmath{$\alpha$}}} and \texttt{MIP-{\color{red}\textbf{1}\boldmath{$\alpha$}}} should tokenize to \texttt{MIP 1 alpha}
+% \item Both \texttt{MIP-{\color{red}1-$\alpha$}} and \texttt{MIP-{\color{red}1$\alpha$}} should tokenize to \texttt{MIP 1 alpha}
 \item Text string \texttt{NF-$\kappa$ B/CD28-responsive}{\small~\cite{trieschnigg2007influence}}
 	\begin{itemize}
 	\small
@@ -819,7 +829,8 @@ COVID-Twitter-BERT: Pretrained large corpus{\small~\cite{muller2020covid}\footno
 
 \begin{frame}{Example 4: Biomedical Data}
 \begin{itemize}
-\item Custom script + NLTK tokenizer $\Rightarrow$ fewer tokenization errors
+\item NLTK tokenizer + post-processing $\Rightarrow$ fewer tokenization errors
+% post-processing = custom script
 \end{itemize}
 \begin{figure}[!ht]
 	\centering
@@ -842,10 +853,15 @@ Data from Table 1 in~\cite{gron2018clinical}
 \item Different applications require different preprocessing methods.
 	\bigskip
 \item Bag-of-words models: Acceptable to remove punctuation, remove stopwords, stem and lemmatize the corpus.
-\item \textbf{Topic modeling, text classification, information retrieval}, etc.
+	\begin{itemize}
+	\item \textbf{Topic modeling, text classification, information retrieval}, etc.
+	\end{itemize}
 	\bigskip
 \item Other applications that require more context: Need to reconsider whether each text preprocessing step is appropriate.
-\item {\small\textbf{Dependency parsing, machine translation, question answering},etc.}
+	\begin{itemize}
+	\item \textbf{Dependency parsing, machine translation,\\
+		text summarization, question answering}, etc.
+	\end{itemize}
 	\bigskip
 \item Detecting multi-word expressions is a challenging problem,\\
 	even with the help of word embeddings.~\cite{park2019learning}
@@ -856,7 +872,7 @@ Data from Table 1 in~\cite{gron2018clinical}
 %	List the three applications: Topic modeling, text classification, information retrieval
 
 % But for other applications,
-% e.g. dependency parsing, machine translation, question answering, etc.
+% e.g. dependency parsing, machine translation, text summarization, question answering, etc.
 % The more context needed => keep more semantic information in the corpus
 % Need to reconsider whether each text preprocessing step is appropriate
 
@@ -880,16 +896,19 @@ Data from Table 1 in~\cite{gron2018clinical}
 \item Word embeddings are useful, but not a panacea solution.\\
 	A non-trivial prerequisite: Tokenize the corpus into words\\
 	% e.g. tokenize corpus into words, minority languages, biomedical text
-\item Need to learn text preprocessing basics to make better decisions
+\item Need to learn text preprocessing basics to make better decisions.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Acknowledgments}
 \begin{itemize}
-\item I am grateful for the support of Microsoft.
+\item I am grateful for the support of \textbf{Microsoft}.
 \item (Insert colleague names here)
 	\bigskip
-\item I'd also like to thank Prof. David Banks, my PhD advisor at Duke University, who motivated me to do research in text preprocessing.
+\item I'd like to thank \textbf{Prof. David Banks}, my PhD advisor at Duke University, who motivated me to do research in text preprocessing.
+\item I also thank my friend \textbf{Sourav Sen} for feedback on the slides.
+	\bigskip
+\item I declare that there is no conflict of interest.
 \end{itemize}
 \end{frame}
 
