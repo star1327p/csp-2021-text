@@ -462,6 +462,8 @@ Discourse parsing needs punctuation to identify relations between text.
 	At a minimum, remove these terms to \textbf{preserve negation}!
 	\bigskip
 \item Stopwords have syntactic information for \textbf{dependency parsing}.\footnote{~\cite{elming2013down, poria2014dependency}}
+% ``Dependency parsing is the process of analyzing the grammatical structure of a sentence based on the dependencies between the words in a sentence. In Dependency parsing, various tags represent the relationship between two words in a sentence.''
+% https://www.analyticsvidhya.com/blog/2020/07/part-of-speechpos-tagging-dependency-parsing-and-constituency-parsing-in-nlp/
 \item Patterns of stopword usage help in \textbf{authorship attribution}~\cite{arun2009stopword} and \textbf{plagiarism detection}~\cite{stamatatos2011plagiarism}.
 \item Feature: How often pronouns are used for a specific name \footnote{~\cite{sanchez2019paraphrase}}
 \item Feature: A person $\Rightarrow$ ``he/she'' or ``he (she)'' or else?
@@ -734,7 +736,7 @@ Stopword removal process:~\cite{yongjianbi2016masters}
 Twitter dataset with daily updates~\cite{banda2020large}\footnote{\url{https://github.com/thepanacealab/covid19_twitter}}\\
 COVID-Twitter-BERT: Pretrained large corpus{\small~\cite{muller2020covid}\footnote{\url{https://github.com/digitalepidemiologylab/covid-twitter-bert}}}
 	\bigskip
-\item \textbf{Analyze the Event Impact}:\\
+\item \textbf{Analyze the impact of recent events}:\\
 	Black Lives Matter~\cite{giorgi2020twitter}\\
 	2020 US presidential election~\cite{chen2020election2020}\\
 	National Disaster Situational Awareness~\cite{karami2020twitter}
@@ -904,9 +906,10 @@ Data from Table 1 in~\cite{gron2018clinical}
 \begin{frame}{Acknowledgments}
 \begin{itemize}
 \item I am grateful for the support of \textbf{Microsoft}.
-\item (Insert colleague names here)
+%\item (Insert colleague names here)
 	\bigskip
-\item I'd like to thank \textbf{Prof. David Banks}, my PhD advisor at Duke University, who motivated me to do research in text preprocessing.
+\item I'd like to thank \textbf{Prof. David Banks}, my PhD advisor at Duke University, who motivated me to do text preprocessing research.
+	\bigskip
 \item I also thank my friend \textbf{Sourav Sen} for feedback on the slides.
 	\bigskip
 \item I declare that there is no conflict of interest.
